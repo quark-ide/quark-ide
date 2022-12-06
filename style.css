@@ -1,0 +1,46 @@
+html {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+p{
+    color: white;
+}
+
+#rrimg{
+    position: absolute;
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    width: 100vw;
+}
+
+@keyframes colorshift {
+    to {
+      background-position: center 200%;
+    }
+  }
+
+.lyrics {
+    font-size: 2em;
+    --col1: purple;
+    --col2: orange;
+    text-align: center;
+
+    background: linear-gradient(to bottom, var(--col1),var(--col2),var(--col1) 80%);
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: colorshift 10s linear infinite;
+}
